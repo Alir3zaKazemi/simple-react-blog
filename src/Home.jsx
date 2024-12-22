@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BlogsList from "./BlogsList";
 import useFetch from "./useFetch";
+// import { handleDelete } from "./useFetch";
 
 const Home = () => {
 	let [name, setName] = useState("ali");
@@ -8,11 +9,12 @@ const Home = () => {
 		data: blogs,
 		isLoading,
 		error,
+    setData
 	} = useFetch("http://localhost:8000/blogs");
 
 	const handleDelete = (id) => {
 		const newBlogs = blogs.filter((blog) => blog.id !== id);
-		setBlog(newBlogs);
+		setData(newBlogs);
 	};
 
 	const changeName = () => {
