@@ -9,7 +9,7 @@ const Home = () => {
 		data: blogs,
 		isLoading,
 		error,
-    setData
+		setData,
 	} = useFetch("http://localhost:8000/blogs");
 
 	const handleDelete = (id) => {
@@ -17,13 +17,13 @@ const Home = () => {
 		setData(newBlogs);
 	};
 
-	const changeName = () => {
-		if (name == "ali") {
-			setName("abol");
-		} else {
-			setName("ali");
-		}
-	};
+	// const changeName = () => {
+	// 	if (name == "ali") {
+	// 		setName("abol");
+	// 	} else {
+	// 		setName("ali");
+	// 	}
+	// };
 
 	return (
 		<div className="Home">
@@ -36,7 +36,7 @@ const Home = () => {
 					handleDelete={handleDelete}
 				/>
 			)}
-			<div className="name-button-container">
+			{/* <div className="name-button-container">
 				<button
 					onClick={() => {
 						changeName();
@@ -45,7 +45,7 @@ const Home = () => {
 					change name
 				</button>
 				<p>{name}</p>
-			</div>
+			</div> */}
 			{blogs && (
 				<BlogsList
 					blogs={blogs.filter((blog) => blog.author === "alireza")}
