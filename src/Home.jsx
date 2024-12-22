@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BlogsList from "./BlogsList";
 
 const Home = () => {
@@ -18,6 +18,20 @@ const Home = () => {
 		setBlog(newBlogs);
 	};
 
+	let [name, setName] = useState("ali");
+
+	useEffect(() => {
+		console.log(name);
+	}, [name]);
+
+	const changeName = () => {
+		if (name == "ali") {
+			setName("abol");
+		} else {
+			setName("ali");
+		}
+	};
+
 	return (
 		<div className="Home">
 			<BlogsList
@@ -25,6 +39,14 @@ const Home = () => {
 				title="All Blogs!"
 				handleDelete={handleDelete}
 			/>
+			<button
+				onClick={() => {
+					changeName();
+				}}
+			>
+				change name
+			</button>
+			<p>{name}</p>
 			<BlogsList
 				blogs={blogs.filter((blog) => blog.author === "alireza")}
 				title="Alireza's blogs!"
