@@ -1,0 +1,17 @@
+{
+	"blogs": [
+		{
+			"title": "my First blog",
+			"body": "lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea saepe quaerat facere iste nemo facilis ipsum eligendi minus aut sit, blanditiis in, nulla dolore architecto rem eos quos omnis laboriosam!",
+			"author": "alireza",
+			"id": 1
+		},
+		{
+			"title": "my Second blog",
+			"body": "lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea saepe quaerat facere iste nemo facilis ipsum eligendi minus aut sit, blanditiis in, nulla dolore architecto rem eos quos omnis laboriosam!",
+			"author": "abol",
+			"id": 2
+		}
+	],
+	"age": 25
+}
