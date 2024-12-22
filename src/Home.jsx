@@ -1,10 +1,9 @@
-import { useState } from "react";
+// import { useState } from "react";
 import BlogsList from "./BlogsList";
 import useFetch from "./useFetch";
-// import { handleDelete } from "./useFetch";
 
 const Home = () => {
-	let [name, setName] = useState("ali");
+	// let [name, setName] = useState("ali");
 	let {
 		data: blogs,
 		isLoading,
