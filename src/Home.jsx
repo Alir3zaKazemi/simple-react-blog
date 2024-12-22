@@ -10,13 +10,20 @@ const Home = () => {
 	};
 
 	let [name, setName] = useState("ali");
+	let [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		fetch("http://localhost:8000/blogs")
-			.then((res) => {
-				return res.json();
-			})
-			.then((data) => setBlog(data));
+		setInterval(() => {
+			//here for just simulating loading, we just used set interval
+			fetch("http://localhost:8000/blogs")
+				.then((res) => {
+					return res.json();
+				})
+				.then((data) => {
+					setBlog(data);
+					setIsLoading(false);
+				});
+		}, 2000);
 	}, []);
 
 	const changeName = () => {
@@ -29,6 +36,7 @@ const Home = () => {
 
 	return (
 		<div className="Home">
+			{isLoading && <div>Loading ...</div>}
 			{blogs && (
 				<BlogsList
 					blogs={blogs}
