@@ -1,38 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import BlogsList from "./BlogsList";
+import useFetch from "./useFetch";
 
 const Home = () => {
-	let [blogs, setBlog] = useState(null);
 	let [name, setName] = useState("ali");
-	let [isLoading, setIsLoading] = useState(true);
-	let [error, setError] = useState(null);
+	let {
+		data: blogs,
+		isLoading,
+		error,
+	} = useFetch("http://localhost:8000/blogs");
 
 	const handleDelete = (id) => {
 		const newBlogs = blogs.filter((blog) => blog.id !== id);
 		setBlog(newBlogs);
 	};
-
-	useEffect(() => {
-		setTimeout(() => {
-			//here for just simulating loading, we just used set timeout
-			fetch("http://localhost:8000/blogs")
-				.then((res) => {
-					if (!res.ok) {
-						throw new Error("something wrong with fetching");
-					}
-					return res.json();
-				})
-				.then((data) => {
-					setError(null);
-					setBlog(data);
-					setIsLoading(false);
-				})
-				.catch((err) => {
-					setError(err.message);
-					setIsLoading(false);
-				});
-		}, 2000);
-	}, []);
 
 	const changeName = () => {
 		if (name == "ali") {
