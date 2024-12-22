@@ -8,13 +8,13 @@ const BlogsList = ({ blogs, title, handleDelete }) => {
 					<Link to={`/blogs/${blog.id}`}>
 						<h2>{blog.title}</h2>
 						<p>Written by : {blog.author}</p>
-						<button
+						{/* <button
 							onClick={() => {
 								handleDelete(blog.id);
 							}}
 						>
 							Delete
-						</button>
+						</button> */}
 					</Link>
 				</div>
 			))}
