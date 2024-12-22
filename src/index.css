@@ -106,11 +106,11 @@
   align-items: center;
 }
 
-.blog-details{
+.blog-details {
   margin-top: 25px;
 }
 
-.blog-details h2{
+.blog-details h2 {
   font-size: 20px;
   color: #F1356d;
   margin-bottom: 10px;
@@ -120,7 +120,7 @@
   margin: 20px 0;
 }
 
-.blog-details button{
+.blog-details button {
   background: #F1356d;
   color: #fff;
   border: 0;
@@ -135,7 +135,7 @@
   text-align: center;
 }
 
-.create label{
+.create label {
   text-align: left;
   display: block;
 }
@@ -147,7 +147,9 @@
   margin-top: 15px;
 }
 
-.create input, .create textarea, .create select {
+.create input,
+.create textarea,
+.create select {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
@@ -163,4 +165,16 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.not-found {
+  margin-top: 25px;
+}
+
+.not-found h2, .not-found p {
+  margin-bottom: 15px;
+}
+
+.not-found a{
+  text-decoration: none;
 }
