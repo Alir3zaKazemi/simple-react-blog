@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -32,13 +32,13 @@
   margin-left: 3%;
 }
 
-.links{
+.links {
   margin-left: auto;
   margin-right: 3%;
 }
 
-.links > a {
-  margin-left: 15px; 
+.links>a {
+  margin-left: 15px;
   text-decoration: none;
   padding: 10px;
   font-size: small;
@@ -47,22 +47,22 @@
   color: white;
 }
 
-.links>a:hover{
+.links>a:hover {
   background-color: rgb(226, 19, 19);
 }
 
-.btn-container{
+.btn-container {
   margin-top: 15px;
   width: 100%;
   display: flex;
 }
 
-.btn-container > button{
+.btn-container>button {
   width: 65px;
   margin: 0 auto;
 }
 
-.content > h1 {
+.content>h1 {
   text-align: center;
 }
 
@@ -76,18 +76,22 @@
   border-bottom: 1px solid #fafafa;
 }
 
+.blog-preview a {
+  text-decoration: none;
+}
+
 .blog-preview:hover {
   box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
   background: rgb(250, 250, 250);
 }
 
-.blog-preview h2{
+.blog-preview h2 {
   font-size: 20px;
   color: #F1356d;
   margin-bottom: 8px;
 }
 
-.name-button-container{
+.name-button-container {
   display: flex;
   flex-direction: column;
   margin: 15px auto;
@@ -96,4 +100,27 @@
   padding: 15px 5px;
   width: 100%;
   align-items: center;
+}
+
+.blog-details{
+  margin-top: 25px;
+}
+
+.blog-details h2{
+  font-size: 20px;
+  color: #F1356d;
+  margin-bottom: 10px;
+}
+
+.blog-details div {
+  margin: 20px 0;
+}
+
+.blog-details button{
+  background: #F1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border: 8px;
+  cursor: pointer;
 }
